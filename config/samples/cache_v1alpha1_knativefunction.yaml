@@ -1,0 +1,12 @@
+apiVersion: cache.example.com/v1alpha1
+kind: KnativeFunction
+metadata:
+  labels:
+    app.kubernetes.io/name: knativefunction
+    app.kubernetes.io/instance: knativefunction-sample
+    app.kubernetes.io/part-of: devconf-knative-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: devconf-knative-operator
+  name: knativefunction-sample
+spec:
+  # TODO(user): Add fields here
