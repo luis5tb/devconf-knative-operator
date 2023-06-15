@@ -16,7 +16,7 @@ resources:
     namespaced: true
   controller: true
   domain: example.com
-  group: cache
+  group: knf
   kind: KnativeFunction
   path: github.com/luis5tb/devconf-knative-operator/api/v1alpha1
   version: v1alpha1

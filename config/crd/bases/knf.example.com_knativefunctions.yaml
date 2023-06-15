@@ -5,9 +5,9 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.11.1
   creationTimestamp: null
-  name: knativefunctions.cache.example.com
+  name: knativefunctions.knf.example.com
 spec:
-  group: cache.example.com
+  group: knf.example.com
   names:
     kind: KnativeFunction
     listKind: KnativeFunctionList

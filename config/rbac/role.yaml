@@ -6,7 +6,7 @@ metadata:
   name: manager-role
 rules:
 - apiGroups:
-  - cache.example.com
+  - knf.example.com
   resources:
   - knativefunctions
   verbs:
@@ -18,13 +18,13 @@ rules:
   - update
   - watch
 - apiGroups:
-  - cache.example.com
+  - knf.example.com
   resources:
   - knativefunctions/finalizers
   verbs:
   - update
 - apiGroups:
-  - cache.example.com
+  - knf.example.com
   resources:
   - knativefunctions/status
   verbs:

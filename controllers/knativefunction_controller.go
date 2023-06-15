@@ -24,7 +24,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
-	cachev1alpha1 "github.com/luis5tb/devconf-knative-operator/api/v1alpha1"
+	knfv1alpha1 "github.com/luis5tb/devconf-knative-operator/api/v1alpha1"
 )
 
 // KnativeFunctionReconciler reconciles a KnativeFunction object
@@ -33,9 +33,9 @@ type KnativeFunctionReconciler struct {
 	Scheme *runtime.Scheme
 }
 
-//+kubebuilder:rbac:groups=cache.example.com,resources=knativefunctions,verbs=get;list;watch;create;update;patch;delete
-//+kubebuilder:rbac:groups=cache.example.com,resources=knativefunctions/status,verbs=get;update;patch
-//+kubebuilder:rbac:groups=cache.example.com,resources=knativefunctions/finalizers,verbs=update
+//+kubebuilder:rbac:groups=knf.example.com,resources=knativefunctions,verbs=get;list;watch;create;update;patch;delete
+//+kubebuilder:rbac:groups=knf.example.com,resources=knativefunctions/status,verbs=get;update;patch
+//+kubebuilder:rbac:groups=knf.example.com,resources=knativefunctions/finalizers,verbs=update
 
 // Reconcile is part of the main kubernetes reconciliation loop which aims to
 // move the current state of the cluster closer to the desired state.
@@ -57,6 +57,6 @@ func (r *KnativeFunctionReconciler) Reconcile(ctx context.Context, req ctrl.Requ
 // SetupWithManager sets up the controller with the Manager.
 func (r *KnativeFunctionReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	return ctrl.NewControllerManagedBy(mgr).
-		For(&cachev1alpha1.KnativeFunction{}).
+		For(&knfv1alpha1.KnativeFunction{}).
 		Complete(r)
 }
